@@ -2231,9 +2231,6 @@ namespace careBeyond_App
 			// aapt resource value: 0x7f07008c
 			public const int action_divider = 2131165324;
 			
-			// aapt resource value: 0x7f0700a0
-			public const int action_edit = 2131165344;
-			
 			// aapt resource value: 0x7f070086
 			public const int action_image = 2131165318;
 			
@@ -2252,9 +2249,6 @@ namespace careBeyond_App
 			// aapt resource value: 0x7f070043
 			public const int action_mode_close_button = 2131165251;
 			
-			// aapt resource value: 0x7f0700a1
-			public const int action_save = 2131165345;
-			
 			// aapt resource value: 0x7f070087
 			public const int action_text = 2131165319;
 			
@@ -2269,6 +2263,9 @@ namespace careBeyond_App
 			
 			// aapt resource value: 0x7f070058
 			public const int alertTitle = 2131165272;
+			
+			// aapt resource value: 0x7f0700a4
+			public const int alert_menu = 2131165348;
 			
 			// aapt resource value: 0x7f07003d
 			public const int all = 2131165245;
@@ -2288,6 +2285,9 @@ namespace careBeyond_App
 			// aapt resource value: 0x7f07004b
 			public const int buttonPanel = 2131165259;
 			
+			// aapt resource value: 0x7f0700a2
+			public const int calendar_menu = 2131165346;
+			
 			// aapt resource value: 0x7f070089
 			public const int cancel_action = 2131165321;
 			
@@ -2305,6 +2305,9 @@ namespace careBeyond_App
 			
 			// aapt resource value: 0x7f070091
 			public const int chronometer = 2131165329;
+			
+			// aapt resource value: 0x7f0700a1
+			public const int clientList_menu = 2131165345;
 			
 			// aapt resource value: 0x7f070039
 			public const int clip_horizontal = 2131165241;
@@ -2414,6 +2417,9 @@ namespace careBeyond_App
 			// aapt resource value: 0x7f070046
 			public const int image = 2131165254;
 			
+			// aapt resource value: 0x7f0700a3
+			public const int inbox_menu = 2131165347;
+			
 			// aapt resource value: 0x7f070092
 			public const int info = 2131165330;
 			
@@ -2438,6 +2444,9 @@ namespace careBeyond_App
 			// aapt resource value: 0x7f070048
 			public const int list_item = 2131165256;
 			
+			// aapt resource value: 0x7f0700a8
+			public const int logout_menu = 2131165352;
+			
 			// aapt resource value: 0x7f07009f
 			public const int masked = 2131165343;
 			
@@ -2461,6 +2470,9 @@ namespace careBeyond_App
 			
 			// aapt resource value: 0x7f070026
 			public const int never = 2131165222;
+			
+			// aapt resource value: 0x7f0700a5
+			public const int newContact_menu = 2131165349;
 			
 			// aapt resource value: 0x7f070014
 			public const int none = 2131165204;
@@ -2555,6 +2567,9 @@ namespace careBeyond_App
 			// aapt resource value: 0x7f070072
 			public const int select_dialog_listview = 2131165298;
 			
+			// aapt resource value: 0x7f0700a7
+			public const int settings_menu = 2131165351;
+			
 			// aapt resource value: 0x7f07005c
 			public const int shortcut = 2131165276;
 			
@@ -2609,6 +2624,9 @@ namespace careBeyond_App
 			// aapt resource value: 0x7f07006f
 			public const int submit_area = 2131165295;
 			
+			// aapt resource value: 0x7f0700a6
+			public const int sync_menu = 2131165350;
+			
 			// aapt resource value: 0x7f070011
 			public const int tabMode = 2131165201;
 			
@@ -2644,6 +2662,9 @@ namespace careBeyond_App
 			
 			// aapt resource value: 0x7f070057
 			public const int title_template = 2131165271;
+			
+			// aapt resource value: 0x7f0700a0
+			public const int todaySchedule_menu = 2131165344;
 			
 			// aapt resource value: 0x7f07009d
 			public const int toolbar = 2131165341;

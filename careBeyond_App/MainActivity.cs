@@ -40,13 +40,27 @@ namespace careBeyond_App
 
         private void NavView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
-            e.MenuItem.SetChecked(true);
 
             switch (e.MenuItem.ItemId)
             {
-                case Resource.Id.action_save:
+                case Resource.Id.todaySchedule_menu:
                     break;
-
+                case Resource.Id.clientList_menu:
+                    break;
+                case Resource.Id.calendar_menu:
+                    break;
+                case Resource.Id.inbox_menu:
+                    break;
+                case Resource.Id.alert_menu:
+                    break;
+                case Resource.Id.newContact_menu:
+                    break;
+                case Resource.Id.sync_menu:
+                    break;
+                case Resource.Id.settings_menu:
+                    break;
+                case Resource.Id.logout_menu:
+                    break;
             }
             Snackbar.Make(drawerLayout, "Selected: " + e.MenuItem.TitleFormatted, Snackbar.LengthLong).Show();
             drawerLayout.CloseDrawers();
