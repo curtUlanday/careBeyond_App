@@ -11,7 +11,7 @@ using Android.Support.V4.Widget;
 
 namespace careBeyond_App
 {
-    [Activity(Label = "careBeyond_App", MainLauncher = true)]
+    [Activity(Label = "CareBeyond Mobile", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         DrawerLayout drawerLayout;
@@ -40,7 +40,7 @@ namespace careBeyond_App
 
         private void NavView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
-
+            e.MenuItem.SetChecked(true);
             switch (e.MenuItem.ItemId)
             {
                 case Resource.Id.todaySchedule_menu:
