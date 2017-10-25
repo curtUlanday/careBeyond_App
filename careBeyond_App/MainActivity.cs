@@ -8,6 +8,13 @@ using Android.Support.V7.App;
 using Android.Support.Design.Widget;
 using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
+using careBeyond_App.Controller;
+using System.Collections.Generic;
+using Android.Util;
+using System.Threading.Tasks;
+using Android.Widget;
+using careBeyond_App.Model;
+using System.Collections;
 
 namespace careBeyond_App
 {
@@ -15,8 +22,11 @@ namespace careBeyond_App
     public class MainActivity : AppCompatActivity
     {
         DrawerLayout drawerLayout;
-        Toolbar toolbar;
+        Android.Support.V7.Widget.Toolbar toolbar;
         NavigationView navigationView;
+        TextView mainTV;
+        private static string TAG = "MainActivity";
+        List<caregiver_model> listCaregiver;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,7 +35,7 @@ namespace careBeyond_App
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerLayout);
-            toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeButtonEnabled(true);
@@ -62,7 +72,7 @@ namespace careBeyond_App
                 case Resource.Id.logout_menu:
                     break;
             }
-            Snackbar.Make(drawerLayout, "Selected: " + e.MenuItem.TitleFormatted, Snackbar.LengthLong).Show();
+            Snackbar.Make(drawerLayout, "Menu " + e.MenuItem.TitleFormatted+ "will be available soon!", Snackbar.LengthLong).Show();
             drawerLayout.CloseDrawers();
 
         }
