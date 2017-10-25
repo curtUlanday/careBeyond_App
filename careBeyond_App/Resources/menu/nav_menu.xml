@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!--For all properties see: http://developer.android.com/guide/topics/resources/menu-resource.html-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  
+  <!-- android:icon="" //Attribute for icon-->
+
+  <group android:checkableBehavior="single">
+    <item android:id="@+id/todaySchedule_menu"
+      android:title="Today's Schedule"
+      app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/clientList_menu"
+           android:title="Client List"
+           app:showAsAction="ifRoom|withText"/>
+
+    <item android:id="@+id/calendar_menu"
+           android:title="Calendar"
+           app:showAsAction="ifRoom|withText"/>
+
+    <item android:id="@+id/inbox_menu"
+           android:title="Inbox"
+           app:showAsAction="ifRoom|withText"/>
+
+    <item android:id="@+id/alert_menu"
+           android:title="Alerts"
+           app:showAsAction="ifRoom|withText"/>
+
+    <item android:title="Others">
+      <menu>
+        <item android:id="@+id/newContact_menu"
+            android:title="New Contact"/>
+        <item android:id="@+id/sync_menu"
+            android:title="Sync"/>
+        <item android:id="@+id/settings_menu"
+            android:title="Settings"/>
+        <item android:id="@+id/logout_menu"
+            android:title="Logout"/>
+      </menu>
+    </item>
+    
+  </group>
+
+  
+
+</menu>
+
+<!-- Code to implement into Activity:
+
+public override bool OnCreateOptionsMenu(IMenu menu)
+{
+  //change main_compat_menu
+	MenuInflater.Inflate(Resource.Menu.nav_menu, menu);
+	return base.OnCreateOptionsMenu(menu);
+}
+
+
+public override bool OnOptionsItemSelected(IMenuItem item)
+{
+	switch (item.ItemId) {
+	case Resource.Id.action_edit:
+		Toast.MakeText (this, "You pressed edit action!", ToastLength.Short).Show ();
+		break;
+	case Resource.Id.action_save:
+		Toast.MakeText (this, "You pressed save action!", ToastLength.Short).Show ();
+		break;
+	}
+	return base.OnOptionsItemSelected(item);
+}
+
+-->
