@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using Android.Widget;
 using careBeyond_App.Model;
 using System.Collections;
+using System.Text;
 
 namespace careBeyond_App
 {
@@ -26,7 +27,7 @@ namespace careBeyond_App
         NavigationView navigationView;
         TextView mainTV;
         private static string TAG = "MainActivity";
-        List<caregiver_model> listCaregiver;
+        List<caregiver_model> caregiverList;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,9 +46,20 @@ namespace careBeyond_App
             navigationView = FindViewById<NavigationView>(Resource.Id.navLayout);
             navigationView.NavigationItemSelected += NavView_NavigationItemSelected;
 
-           
+            mainTV = FindViewById<TextView>(Resource.Id.responseTV);
+            caregiverList = new List<caregiver_model>();
+
+            getCaregivers();
+             
+            //mainTV.Text = caregiverList.ToString();        
         }
 
+        public async void getCaregivers()
+        {
+            var caregiver = await APIService.getSerializeJSON("http://dev10.noteefied.us/api/caregivers");
+            Console.WriteLine(caregiver);
+        }
+        
         private void NavView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
             e.MenuItem.SetChecked(true);

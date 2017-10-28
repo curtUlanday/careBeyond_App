@@ -9,21 +9,28 @@ namespace careBeyond_App.Controller
 {
     public static class APIService
     {
-        public static async Task<T> getSerializeJSON<T>(string url) where T : new()
+        public static async Task<string> getSerializeJSON(string url)
         {
-            using (var httpClient = new HttpClient())
+            if (!string.IsNullOrEmpty(url))
             {
-                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                var jsonData = string.Empty;
-                try
+                using (var httpClient = new HttpClient())
                 {
-                    jsonData = await httpClient.GetStringAsync(url);
+                    httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    var jsonData = string.Empty;
+                    try
+                    {
+                        jsonData = await httpClient.GetStringAsync(url);
+                    }
+                    catch (Exception)
+                    {
+                        return jsonData = string.Empty;
+                    }
+                    return !string.IsNullOrEmpty(jsonData) ? jsonData : jsonData = string.Empty;
                 }
-                catch (Exception)
-                {
-                    return default(T);
-                }
-                return !string.IsNullOrEmpty(jsonData) ? JsonConvert.DeserializeObject<T>(jsonData) : default(T);
+            }
+            else
+            {
+                return "Invalid URL";
             }
         }
 
@@ -48,23 +55,27 @@ namespace careBeyond_App.Controller
             }
         }
 
-        public static async Task<T> getSerializeJSON2<T>(string url) where T : new()
+        /**
+        public static async Task<string> getSerializeJSON2(string url)
         {
             var request = new HttpRequestMessage();
             request.RequestUri = new Uri(url);
             request.Method = HttpMethod.Get;
             request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("Cache-Control", "no-cache");
+            request.Headers.Add("Postman-Token", "1be474d8-3ba7-46ea-5748-a409f87312ce");
             var client = new HttpClient();
             var jsonData = string.Empty;
 
             HttpResponseMessage response = await client.SendAsync(request);
-            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 HttpContent content = response.Content;
                 jsonData = await content.ReadAsStringAsync();
             }
-            return !string.IsNullOrEmpty(jsonData) ? JsonConvert.DeserializeObject<T>(jsonData) : default(T);
+            return jsonData;
         }
+        */
 
 
     }
